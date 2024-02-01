@@ -1,13 +1,84 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(120deg, #5f57d1, #c065c0);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.container {
+  width: 35rem;
+}
+
+.container h1 {
+  color: whitesmoke;
+  text-align: center;
+  padding: 3rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+.list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.inputListItems {
+  flex-grow: 0.4;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  background-color: white;
+  padding: 5px;
+  justify-content: space-between;
+}
+.inputListItems input {
+  border: none;
+}
+.inputListItems-cat {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  background-color: white;
+  padding: 5px;
+  justify-content: space-between;
+  width: 25rem;
+}
+.inputTransformed {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  opacity: 0.5;
+  padding: 5px;
+  justify-content: space-between;
+  width: 24rem;
+}
+
+.marked {
+  text-decoration: line-through;
+}
+
+*:focus {
+  outline: none;
+}
+
+@media (350px <= width <= 540px) {
+  .container {
+    width: auto;
+  }
+  .inputListItems-cat {
+    width: 18rem;
+  }
+  .inputTransformed {
+    width: 17rem;
+  }
 }
